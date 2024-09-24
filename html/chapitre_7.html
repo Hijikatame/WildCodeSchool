@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+        <!-- Head of the document -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chapitre 7 | Formulaire</title>
+        <meta name="description" content="Chapitre 7, ecrire un Formulaire">
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <h1>Contactez-moi</h1>
+        <form action="/adoption-demand" method="post">
+            <p>
+                <label for="nom">Votre nom ?</label>
+                <input type="text" id="nom">
+            </p>
+            <p>
+                <label for="email">Votre e-mail ?</label>
+                <input type="email" id="email" required>
+            </p>
+            <p>
+                <label for="date">Votre date de naissance</label>
+                <input type="date" id="date">
+            </p>
+            <p>
+                <label for="personne">Nombre de personne : </label>
+                <input type="number" id="personne">
+            </p>
+            <p>
+                <label for="mdp">Mot de passe : </label>
+                <input type="password" id="mdp">
+            </p>
+            <p>
+                <label for="newsletter">S'inscrire à la newsletter</label>
+                <input type="checkbox" id="newsletter">
+            </p>
+            <p>
+                <fieldset>
+                    <legend>Veuillez choisir vos skills :</legend>
+                    
+                    <label for="webdev">Developpement Web</label>
+                    <input type="checkbox" id="webdev" name="interest" value="coding">
+                    
+                    <label for="music">Musique</label>
+                    <input type="checkbox" id="music" name="interest" value="music">  
+                </fieldset>
+            </p>
+            <p>
+                <fieldset>
+                    <legend>Quel est votre langage de programmation favori:</legend>
+                
+                    <input type="radio" id="javascript" name="favoriteLanguage" value="javascript">
+                    <label for="javascript">JavaScript</label>
+                
+                    <input type="radio" id="python" name="favoriteLanguage" value="python">
+                    <label for="python">Python</label>
+                
+                    <input type="radio" id="java" name="favoriteLanguage" value="java">
+                    <label for="java">Java</label>
+                </fieldset>
+            </p>
+            <p>
+                <label for="volume">Volume</label>
+                <input type="range" id="volume" name="volume" min="0" max="11">
+            </p>
+            <p>
+                <label for="pet-select">Quel animal voulez vous adopter?</label>
+                <select name="pets" id="pet-select">
+                    <option value="">--Veuillez choisir une option--</option>
+                    <option value="dog">Chien</option>
+                    <option value="cat">Chat</option>
+                    <option value="hamster">Hamster</option>
+                </select>
+            </p>
+            <p>
+                <label for="message">Ecrivez votre message:</label>
+                <br>
+                <textarea id="message" name="message" rows="5" cols="33" maxlength="500" wrap>Tapez votre message ici...</textarea>
+            </p>
+
+            <p><button type="submit" value="Envoyer">Valider mon inscription</button></p>s
+        </form>
+    </main>   
+</body>
+</html>
