@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --primaire: #a306b6;
+    --neutre1: #fff;
+
+    --titre1: 2em;
+
+    --petit-espace: .5em;
+    --espace: 1em;
+    --grand-espace: 2em;
+    --tres-grand-espace: 3em;
+}
+
+
+header, footer {
+    background-color: var(--primaire);
+    color: var(--neutre1);
+}
+a {
+    color: var(--neutre1);
+    font-size: var(--titre1);
+    font-weight: bold;
+}
+nav ul {
+    display: flex;
+}
+nav ul li {
+    padding: var(--petit-espace);
+}
+
+main {
+    background-image: url(Images/lion.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+h1 {
+    color: var(--neutre1);
+    font-size: var(--titre1);
+    font-weight: bold;
+    text-align: center;
+    padding-top: var(--tres-grand-espace);
+    padding-bottom: var(--tres-grand-espace);
+}
+.content {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--grand-espace);
+}
+.content > h2, .content > p, .content > .article {
+    width: 50%;
+}
+h2 {
+    margin-top: var(--grand-espace);
+    margin-bottom: var(--petit-espace);
+}
+.article {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+article {
+    padding: var(--espace);
+    background-color: var(--neutre1);
+    box-shadow: 1px 1px 1px black;
+}
+footer {
+    padding: var(--petit-espace);
+}

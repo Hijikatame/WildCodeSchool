@@ -1,0 +1,313 @@
+/*
+Author:       Lepert Tom  
+Description:  Exercices reponsive
+Version:      1.0
+*/
+
+
+/* -------------------------------------------------------
+	
+	SOMMAIRE
+	
+	- Variables (custom properties)
+	- Reset (remise à zero de styles par défaut)
+	- Typographie base
+	- Typographie
+	- Couleurs
+	- Nav
+
+--------------------------------------------------------*/
+
+
+
+
+/* -------------------------------------------------------
+
+	VARIABLES
+
+--------------------------------------------------------*/
+:root {
+	/* blanc à noir */
+	--neutre-1: #fff;
+	--neutre-2: #e0e0e0;
+	--neutre-3: #8d8d8d;
+	--neutre-4: #000;
+	/* violet */
+	--primaire-1: #A306B6;
+	/* espaces pour retrait et marges */
+	--espace-petit: .75rem;
+	--espace: 1.5rem;
+	--espace-grand: 3rem;
+	--espace-geant: 6rem;
+}
+/* usage : 
+color: var(--primaire-1)
+*/
+/* -------------------------------------------------------
+
+	FIN VARIABLES
+
+--------------------------------------------------------*/
+
+
+
+
+
+/* -------------------------------------------------------
+
+	RESET
+
+--------------------------------------------------------*/
+html,
+body {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+address,
+big,
+cite,
+code,
+em,
+img,
+small,
+strike,
+sub,
+sup,
+li,
+ol,
+ul,
+fieldset,
+form,
+label,
+legend,
+button,
+table,
+caption,
+tr,
+th,
+td {
+	margin: 0;
+    padding: 0;
+    border: none;
+    outline: 0;
+    font-size: inherit;
+	line-height: inherit;
+    vertical-align: baseline;
+    text-align: inherit;
+    background: transparent;
+}
+
+blockquote::before,
+blockquote::after {
+	content: '';
+}
+*, *:before, *:after { 
+	box-sizing: border-box; 
+	text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+    -webkit-tap-highlight-color: transparent;
+}
+input[type="text"], 
+input[type="tel"], 
+input[type="email"], 
+input[type="password"], 
+input[type="search"], 
+textarea {
+    outline: none;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+    border-radius: 0;
+}
+
+/* -------------------------------------------------------
+	FIN RESET
+--------------------------------------------------------*
+
+
+
+
+/* -------------------------------------------------------
+
+	TYPOGRAPHIE BASE
+
+--------------------------------------------------------*/
+/*
+Système proportionnel
+
+Il est important de bien définir les corps de polices (font-size), les retraits (padding) et les marges (margin) en unités typographiques, ici rem. 
+Cela permet, lorsqu'on change le corps de référence (html = 62.5% = 10px), à l'ensemble de conserver ses proportions, tout étant basé sur la valeur du corps de police de html, l'élément racine.
+*/
+
+/* Définir le cadratin de référence (root) à 10px pour faciliter les calculs */ 
+html {
+	font-size: 62.5%;/* = 10px */
+}
+/* On remet body aux 16px par défaut */
+/* On utilise .em au lieu de .rem à cause d'un bug du navigateur Chrome  */
+/* https://code.google.com/p/chromium/issues/detail?id=320754 */
+body {
+	font-size: 1em;/* = 16px */
+	line-height: 1.5;/* Interlignage : 1.5 x 16px */
+}
+p {
+	padding-bottom: 2.4rem;
+}
+ul, ol {
+	margin-left: 1.6rem;
+	margin-bottom: 1.6rem;
+}
+ul ul, ul ul ul, ol ol, ol ol ol {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+@media screen and (min-width: 1000px) {
+	h1 {
+	font-size: 3.84rem;/* 2.6em = 2.6 x 16 = 38.4px = 3.84rem */
+	line-height: 1.1; /* 1.1 = 38.4px x 1.1 = 42.24px = 4.224rem */
+	padding-bottom: 3rem;/* 1em = 1 x 38.4 px = 3.84rem */
+	}
+}
+/* -------------------------------------------------------
+	FIN TYPOGRAPHIE BASE
+--------------------------------------------------------*/
+
+
+/* -------------------------------------------------------
+
+	TYPOGRAPHIE
+
+--------------------------------------------------------*/
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+}
+a {
+	text-decoration: none;
+    color: var(--neutre-1);
+}
+li {
+    list-style: none;
+}
+/* -------------------------------------------------------
+	FIN TYPOGRAPHIE
+--------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------
+	BACKGROUND
+--------------------------------------------------------*/
+body {
+	background-color: var(--neutre-3);
+}
+
+/* -------------------------------------------------------
+	 FIN BACKGROUND
+--------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------
+
+	NAV
+
+--------------------------------------------------------*/
+nav {
+    position: fixed;
+    inset: auto 0 0 0;
+    background-color: var(--primaire-1);
+}
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+li {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+img {
+    width: 2em;
+}
+span {
+    display: none;
+}
+.logo {
+    display: none;
+}
+
+@media screen and (width >= 1024px) and (orientation: landscape) {
+	/* NAV ---------------------------------------- */
+    nav {
+        inset: 0 0 0 auto;
+        display: flex;
+    }
+    ul {
+        flex-direction: column;
+    }
+    a {
+        display: inherit;
+    }
+    span {
+        display: flex;
+        align-items: center;
+        padding: 1em
+    }
+}
+@media screen and (width >= 1200px) {
+	/* NAV ---------------------------------------- */
+    nav {
+        inset: 0 0 auto 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    ul {
+        flex-direction: row;
+    }
+    a {
+        display: inherit;
+    }
+    span {
+        display: flex;
+        align-items: center;
+        padding: 1em
+    }
+    .logo {
+        display: block;
+    }
+}
+/* -------------------------------------------------------
+	FIN HEADER
+--------------------------------------------------------*/

@@ -1,0 +1,256 @@
+/* -------------------------------------------------------
+	
+	SOMMAIRE
+	
+    - Reset (remise à zero de styles par défaut)
+	- Variables (custom properties)
+	- Class génériques
+    - Typographie base
+    - Header
+    - Hero
+    - Articles
+    - Footer
+
+--------------------------------------------------------*/
+
+
+
+
+
+
+/* -------------------------------------------------------
+
+	RESET
+
+--------------------------------------------------------*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+/* -------------------------------------------------------
+	FIN RESET
+--------------------------------------------------------*/
+
+
+
+
+/* -------------------------------------------------------
+
+	VARIABLES
+
+--------------------------------------------------------*/
+:root {
+    --primaire: #a306b6;
+    --neutre1: #fff;
+    --neutre2: lightgray;
+
+    --titre1: 2em;
+
+    --petit-espace: .5em;
+    --espace: 1em;
+    --grand-espace: 2em;
+    --tres-grand-espace: 3em;
+}
+/* -------------------------------------------------------
+
+	FIN VARIABLES
+
+--------------------------------------------------------*/
+
+
+
+
+
+/* -------------------------------------------------------
+
+	CLASS GENERIQUES
+
+--------------------------------------------------------*/
+.color-neutre {
+    color: var(--neutre1);
+}
+.background-primaire {
+    background-color: var(--primaire);
+}
+.background-neutre {
+    background-color: var(--neutre1);
+}
+.background-grey {
+    background-color: var(--neutre2);
+}
+/* -------------------------------------------------------
+
+	FIN CLASS GENERIQUES
+
+--------------------------------------------------------*/
+
+
+/* -------------------------------------------------------
+
+	TYPOGRAPHIE BASE
+
+--------------------------------------------------------*/
+/*
+Système proportionnel
+
+Il est important de bien définir les corps de polices (font-size), les retraits (padding) et les marges (margin) en unités typographiques, ici rem. 
+Cela permet, lorsqu'on change le corps de référence (html = 62.5% = 10px), à l'ensemble de conserver ses proportions, tout étant basé sur la valeur du corps de police de html, l'élément racine.
+*/
+
+/* Définir le cadratin de référence (root) à 10px pour faciliter les calculs */ 
+html {
+	font-size: 62.5%;/* = 10px */
+}
+/* On remet body aux 16px par défaut */
+/* On utilise .em au lieu de .rem à cause d'un bug du navigateur Chrome  */
+/* https://code.google.com/p/chromium/issues/detail?id=320754 */
+body {
+	font-size: 1.6em;/* = 16px */
+	line-height: 1.5;/* Interlignage : 1.5 x 16px */
+}
+p {
+	padding-bottom: 2.4rem;
+}
+h1, .logo {
+	font-size: 2rem;/* 2.6em = 2.6 x 16 = 38.4px = 3.84rem */
+	line-height: 1.1; /* 1.1 = 38.4px x 1.1 = 42.24px = 4.224rem */
+	padding-bottom: 3.84rem;/* 1em = 1 x 38.4 px = 3.84rem */
+    font-weight: bold;
+}
+h2 {
+	font-size: 2.88rem;
+	line-height: 1.2;
+	padding-bottom: 2.88rem;
+}
+h3 {
+	font-size: 2.4rem;
+	line-height: 1.3;
+	padding-bottom: 2.4rem;
+}
+
+ul, ol {
+	padding: 1.6rem;
+	padding-bottom: 1.6rem;
+}
+ul ul, ul ul ul, ol ol, ol ol ol {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+@media screen and (min-width: 1000px) {
+	h1 {
+	font-size: 3.84rem;/* 2.6em = 2.6 x 16 = 38.4px = 3.84rem */
+	line-height: 1.1; /* 1.1 = 38.4px x 1.1 = 42.24px = 4.224rem */
+	padding-bottom: 3.84rem;/* 1em = 1 x 38.4 px = 3.84rem */
+	}
+}
+/* -------------------------------------------------------
+	FIN TYPOGRAPHIE BASE
+--------------------------------------------------------*/
+
+
+/* -------------------------------------------------------
+
+	HEADER
+
+--------------------------------------------------------*/
+nav ul {
+    display: flex;
+}
+nav ul li {
+    padding: var(--petit-espace);
+}
+
+/* -------------------------------------------------------
+
+	FIN HEADER
+
+--------------------------------------------------------*/
+
+
+
+
+
+/* -------------------------------------------------------
+
+	HERO
+
+--------------------------------------------------------*/
+main {
+    background-image: url(Images/lion.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.logo {
+    padding-left: var(--espace);
+}
+h1 {
+    text-align: center;
+    padding-top: var(--tres-grand-espace);
+    padding-bottom: var(--tres-grand-espace);
+}
+
+/* -------------------------------------------------------
+
+	FIN HERO
+
+--------------------------------------------------------*/
+
+
+
+
+/* -------------------------------------------------------
+
+	ARTICLES
+
+--------------------------------------------------------*/
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--grand-espace);
+}
+.content > h2, .content > p, .content > .article {
+    width: 50%;
+}
+h2 {
+    margin-top: var(--grand-espace);
+    margin-bottom: var(--petit-espace);
+}
+.article {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+article {
+    padding: var(--espace);
+    box-shadow: 1px 1px 1px black;
+}
+
+/* -------------------------------------------------------
+
+	FIN ARTICLES
+
+--------------------------------------------------------*/
+
+
+
+
+/* -------------------------------------------------------
+
+	FOOTER
+
+--------------------------------------------------------*/
+footer {
+    padding: var(--petit-espace);
+}
+
+/* -------------------------------------------------------
+
+	FIN FOOTER
+
+--------------------------------------------------------*/

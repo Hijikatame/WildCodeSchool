@@ -1,0 +1,217 @@
+/* -------------------------------------------------------
+	
+	SOMMAIRE
+	
+    - Reset (remise à zero de styles par défaut)
+	- Variables (custom properties)
+	- Class génériques
+    - Typographie base
+    - Card
+    - Section
+    - Boutton
+
+--------------------------------------------------------*/
+
+
+
+
+
+
+/* -------------------------------------------------------
+
+	RESET
+
+--------------------------------------------------------*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* -------------------------------------------------------
+	FIN RESET
+--------------------------------------------------------*/
+
+
+
+
+/* -------------------------------------------------------
+
+	VARIABLES
+
+--------------------------------------------------------*/
+:root {
+    --background-neutre: lightgrey;
+
+    --color-blue: blue;
+    --color-grey: rgb(66, 66, 66);
+    --color-white: #fff;
+}
+/* -------------------------------------------------------
+
+	FIN VARIABLES
+
+--------------------------------------------------------*/
+
+
+
+
+
+/* -------------------------------------------------------
+
+	CLASS GENERIQUES
+
+--------------------------------------------------------*/
+.background-neutre {
+    background-color: var(--background-neutre);
+}
+.background-blue {
+    background-color: var(--color-blue);
+}
+.color-blue {
+    color: var(--color-blue);
+}
+.color-grey {
+    color: var(--color-grey);
+}
+.color-white {
+    color: var(--color-white);
+}
+/* -------------------------------------------------------
+
+	FIN CLASS GENERIQUES
+
+--------------------------------------------------------*/
+
+
+/* -------------------------------------------------------
+
+	TYPOGRAPHIE BASE
+
+--------------------------------------------------------*/
+/*
+Système proportionnel
+
+Il est important de bien définir les corps de polices (font-size), les retraits (padding) et les marges (margin) en unités typographiques, ici rem. 
+Cela permet, lorsqu'on change le corps de référence (html = 62.5% = 10px), à l'ensemble de conserver ses proportions, tout étant basé sur la valeur du corps de police de html, l'élément racine.
+*/
+
+/* Définir le cadratin de référence (root) à 10px pour faciliter les calculs */ 
+html {
+	font-size: 62.5%;/* = 10px */
+}
+/* On remet body aux 16px par défaut */
+/* On utilise .em au lieu de .rem à cause d'un bug du navigateur Chrome  */
+/* https://code.google.com/p/chromium/issues/detail?id=320754 */
+body {
+	font-size: 1.6em;/* = 16px */
+	line-height: 1.5;/* Interlignage : 1.5 x 16px */
+}
+p {
+	padding-bottom: 2.4rem;
+}
+h1 {
+	font-size: 2.44rem;
+	line-height: 1.1; /* 1.1 = 38.4px x 1.1 = 42.24px = 4.224rem */
+	padding-bottom: 0.96rem;
+    font-weight: bold;
+}
+h2 {
+	font-size: 1.92rem;
+	line-height: 1.2;
+	padding-bottom: 1.92rem;
+}
+ul, ol {
+	padding: 1.6rem;
+	padding-bottom: 1.6rem;
+}
+ul ul, ul ul ul, ol ol, ol ol ol {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+@media screen and (min-width: 1000px) {
+	h1 {
+	font-size: 3.84rem;
+	line-height: 1.1; 
+	padding-bottom: 1.92rem;
+	}
+}
+/* -------------------------------------------------------
+	FIN TYPOGRAPHIE BASE
+--------------------------------------------------------*/
+
+
+/* -------------------------------------------------------
+
+	CARD
+
+--------------------------------------------------------*/
+main {
+    display: flex;
+    justify-content: center;
+}
+.card-container {
+    width: 30%;
+    margin-top: 4rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, .8);
+}
+img {
+    display: block;
+    width: calc(100% - 2rem);
+    margin: 2rem 1rem 2rem 1rem;
+    border-radius: 0.5rem;
+}
+
+/* -------------------------------------------------------
+
+	FIN CARD
+
+--------------------------------------------------------*/
+
+
+
+
+
+/* -------------------------------------------------------
+
+	SECTION
+
+--------------------------------------------------------*/
+section {
+    padding: 0 1rem 0 1rem;
+    width: calc(100% - 2rem);
+}
+blockquote {
+    padding-left: 2rem;
+}
+/* -------------------------------------------------------
+
+	FIN SECTION
+
+--------------------------------------------------------*/
+
+
+
+
+/* -------------------------------------------------------
+
+	BOUTTON
+
+--------------------------------------------------------*/
+.button {
+    display: flex;
+    justify-content: flex-end;
+}
+button {
+    border: none;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 5px;
+}
+
+/* -------------------------------------------------------
+
+	FIN BOUTTON
+
+--------------------------------------------------------*/
