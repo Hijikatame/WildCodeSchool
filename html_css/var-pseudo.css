@@ -1,0 +1,112 @@
+/* -------------------------------------------------------
+	
+	SOMMAIRE
+	- Variables
+	- Pseudo class
+
+--------------------------------------------------------*/
+
+
+/* -------------------------------------------------------
+
+	VARIABLES
+
+--------------------------------------------------------*/
+:root {
+	/* blanc à noir */
+	--neutre-1: #fff;
+	--neutre-2: #D9D9D9;
+	--neutre-3: #8d8d8d;
+	--neutre-4: #000;
+	
+    /* violet */
+	--primaire-1: #A306B6;
+	
+    /* espaces pour retrait et marges */
+	--espace-petit: .75rem;
+	--espace: 1.5rem;
+	--espace-grand: 3rem;
+	--espace-geant: 6rem;
+}
+/* usage : 
+color: var(--primaire-1)
+*/
+/* -------------------------------------------------------
+
+	FIN VARIABLES
+
+--------------------------------------------------------*/
+
+
+
+
+
+/* -------------------------------------------------------
+
+	CLASS GENERIQUES
+
+--------------------------------------------------------*/
+/* blanc à noir */
+.color-neutre-1 {
+    color: var(--neutre-1);
+}
+.color-neutre-2 {
+    color: var(--neutre-2);
+}
+.color-neutre-3 {
+    color: var(--neutre-3);
+}
+.color-neutre-4 {
+    color: var(--neutre-4);
+}
+.background-neutre-1 {
+    background-color: var(--neutre-1);
+}
+.background-neutre-2 {
+    background-color: var(--neutre-2);
+}
+.background-neutre-3 {
+    background-color: var(--neutre-3);
+}
+.background-neutre-4 {
+    background-color: var(--neutre-4);
+}
+
+/* violet */
+.color-primaire-1 {
+    color: var(--primaire-1);
+}
+.background-primaire-1 {
+    background-color: var(--primaire-1);
+}
+
+/* espaces */
+.margin-petit {
+    margin: var(--espace-petit);
+}
+.margin {
+    margin: var(--espace);
+}
+.margin-grand {
+    margin: var(--espace-grand);
+}
+.margin-geant {
+    margin: var(--espace-geant);
+}
+.padding-petit {
+    padding: var(--espace-petit);
+}
+.padding {
+    padding: var(--espace);
+}
+.padding-grand {
+    padding: var(--espace-grand);
+}
+.padding-geant {
+    padding: var(--espace-geant);
+}
+/* -------------------------------------------------------
+
+	FIN CLASS GENERIQUES
+
+--------------------------------------------------------*/

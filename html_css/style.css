@@ -1,0 +1,175 @@
+/* -------------------------------------------------------
+	
+	SOMMAIRE
+	- Header
+
+--------------------------------------------------------*/
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------
+
+	HEADER
+
+--------------------------------------------------------*/
+header {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+header nav a {
+    justify-content: center;
+}
+header nav > a img {
+    width: 20%;
+}
+header nav {
+    text-align: center;
+}
+header nav ul {
+    display: flex;
+    gap: var(--espace-geant);
+}
+header div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header div img {
+    width: 30%;
+    border: 1rem solid var(--neutre-1);
+    border-radius: 50%;
+}
+@media screen and (min-width: 992px) {
+    header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
+    }
+    header nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: var(--espace-petit);
+    }
+    header nav > a {
+        display: flex;
+        justify-content: flex-start;
+    }
+    header nav ul {
+        padding-right: var(--espace-geant);
+    }
+    header div {
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: var(--espace-geant);
+    }
+    header div img {
+        width: 10%;
+    }
+}
+/* -------------------------------------------------------
+
+	FIN HEADER
+
+--------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------
+
+	MAIN
+
+--------------------------------------------------------*/
+main {
+    padding: var(--espace);
+}
+main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* articles */
+main section:first-child {
+    margin-bottom: var(--espace-geant);
+}
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espace);
+}
+article {
+    width: 100%;
+    text-align: center;
+}
+article img {
+    width: 100%;
+}
+article button {
+    padding-top: var(--espace);
+    padding-bottom: var(--espace);
+    padding-left: var(--espace-grand);
+    padding-right: var(--espace-grand);
+    border-radius: 50px;
+    font-weight: bold;
+}
+@media screen and (min-width: 992px) {
+    article {
+        width: 20%;
+    }
+    .articles {
+        justify-content: center;
+    }
+    main section:last-child p {
+        width: 30%;
+    }
+}
+/* -------------------------------------------------------
+
+	FIN MAIN
+
+--------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------
+
+	FIN FOOTER
+
+--------------------------------------------------------*/
+footer span {
+    color: red;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+footer a:visited {
+    color: var(--primaire-1);
+}
+/* -------------------------------------------------------
+
+	FIN FOOTER
+
+--------------------------------------------------------*/

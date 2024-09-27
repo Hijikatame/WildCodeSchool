@@ -1,0 +1,151 @@
+/* -------------------------------------------------------
+	
+	SOMMAIRE
+	- Variables
+	- Pseudo class
+
+--------------------------------------------------------*/
+
+
+/* -------------------------------------------------------
+
+	VARIABLES
+
+--------------------------------------------------------*/
+:root {
+	/* blanc à noir */
+	--neutre-1: #fff;
+	--neutre-2: #e0e0e0;
+	--neutre-3: #8d8d8d;
+	--neutre-4: #000;
+	
+    /* bleus */
+	--primaire-1: #318ce7;
+	--primaire-1-clair: #048b9a;
+	--primaire-1-sombre: #007fff;
+	
+    /* rouges */
+	--accent-1: #9a1304;
+	--accent-1-clair: #e78c31;
+	--accent-1-sombre: #ff8000;
+	
+    /* espaces pour retrait et marges */
+	--espace-petit: .75rem;
+	--espace: 1.5rem;
+	--espace-grand: 3rem;
+	--espace-geant: 6rem;
+}
+/* usage : 
+color: var(--primaire-1)
+*/
+/* -------------------------------------------------------
+
+	FIN VARIABLES
+
+--------------------------------------------------------*/
+
+
+
+
+
+/* -------------------------------------------------------
+
+	CLASS GENERIQUES
+
+--------------------------------------------------------*/
+/* blanc à noir */
+.color-neutre-1 {
+    color: var(--neutre-1);
+}
+.color-neutre-2 {
+    color: var(--neutre-2);
+}
+.color-neutre-3 {
+    color: var(--neutre-3);
+}
+.color-neutre-4 {
+    color: var(--neutre-4);
+}
+.background-neutre-1 {
+    background-color: var(--neutre-1);
+}
+.background-neutre-2 {
+    background-color: var(--neutre-2);
+}
+.background-neutre-3 {
+    background-color: var(--neutre-3);
+}
+.background-neutre-4 {
+    background-color: var(--neutre-4);
+}
+
+/* bleus */
+.color-primaire-1 {
+    color: var(--primaire-1);
+}
+.color-primaire-1-clair {
+    color: var(--primaire-1-clair);
+}
+.color-primaire-1-sombre {
+    color: var(--primaire-1-sombre);
+}
+.background-primaire-1 {
+    background-color: var(--primaire-1);
+}
+.background-primaire-1-clair {
+    background-color: var(--primaire-1-clair);
+}
+.background-primaire-1-sombre {
+    background-color: var(--primaire-1-sombre);
+}
+
+/* rouges */
+.color-accent-1 {
+    color: var(--accent-1);
+}
+.color-accent-1-clair {
+    color: var(--accent-1-clair);
+}
+.color-accent-1-sombre {
+    color: var(--accent-1-sombre);
+}
+.background-accent-1 {
+    background-color: var(--accent-1);
+}
+.background-accent-1-clair {
+    background-color: var(--accent-1-clair);
+}
+.background-accent-1-sombre {
+    background-color: var(--accent-1-sombre);
+}
+
+/* espaces */
+.margin-petit {
+    margin: var(--espace-petit);
+}
+.margin {
+    margin: var(--espace);
+}
+.margin-grand {
+    margin: var(--espace-grand);
+}
+.margin-geant {
+    margin: var(--espace-geant);
+}
+.padding-petit {
+    padding: var(--espace-petit);
+}
+.padding {
+    padding: var(--espace);
+}
+.padding-grand {
+    padding: var(--espace-grand);
+}
+.padding-geant {
+    padding: var(--espace-geant);
+}
+/* -------------------------------------------------------
+
+	FIN CLASS GENERIQUES
+
+--------------------------------------------------------*/
