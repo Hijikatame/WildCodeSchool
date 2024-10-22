@@ -10,15 +10,15 @@ const pokemonList = [
   },
   {
     name: "mew",
-    imgScr: null,
+    imgSrc: undefined,
   },
 ];
 
 function App() {
   return (
     <section>
-      <PokemonCard pokemon={pokemonList[0]} />
-      <PokemonCard pokemon={pokemonList[1]} />
+      <PokemonCard name={pokemonList[0].name} imgSrc={pokemonList[0].imgSrc} />
+      <PokemonCard name={pokemonList[1].name} />
     </section>
   );
 }
