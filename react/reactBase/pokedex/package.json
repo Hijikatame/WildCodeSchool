@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "serve": "vite preview",
     "build": "tsc -b && vite build",
     "check": "biome check src",
     "preview": "vite preview"
