@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar";
 import PokemonCard from "./components/PokemonCard";
 import { useState } from "react";
 import { useEffect } from "react";
+import styles from './modules/PokemonCard.module.css';
 
 const pokemonList = [
   {
@@ -43,7 +44,11 @@ function App() {
   return (
     <section>
       <div>
-        <PokemonCard name={pokemonList[pokemonIndex].name} imgSrc={pokemonList[pokemonIndex].imgSrc} />
+        <PokemonCard 
+        name={pokemonList[pokemonIndex].name} 
+        imgSrc={pokemonList[pokemonIndex].imgSrc}
+        styles={styles}
+        />
       </div>
       <NavBar
         pokemonIndex={pokemonIndex}
