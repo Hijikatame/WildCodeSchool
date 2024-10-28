@@ -11,31 +11,18 @@ interface NavBarProps {
     pokemonList: Pokemon[];
 }
 
-const NavBar: React.FC<NavBarProps> = ({ pokemonIndex, setPokemonIndex, pokemonList }) => {
-    const handleClickPrev = () => {
-        if (pokemonIndex > 0) {
-            setPokemonIndex(pokemonIndex - 1);
-        }
-    };
-
-    const handleClickNext = () => {
-        if (pokemonIndex < pokemonList.length - 1) {
-          setPokemonIndex(pokemonIndex + 1);
-        }
-    };
+const NavBar: React.FC<NavBarProps> = ({ setPokemonIndex, pokemonList }) => {
 
     return (
         <nav>
-            {pokemonIndex > 0 && (
-                <button onClick={handleClickPrev} /*disabled={pokemonIndex === 0}*/ /*style={{ display: pokemonIndex === 0 ? 'none' : 'inline-block' }}*/>
-                Précédent
+            {pokemonList.map((pokemon, index) => (
+                <button
+                    key={pokemon.name}
+                    onClick={() => setPokemonIndex(index)}
+                >
+                    {pokemon.name}
                 </button>
-            )}
-            {pokemonIndex < pokemonList.length - 1 && (
-                <button onClick={handleClickNext} /*disabled={pokemonIndex === pokemonList.length - 1}*/ /*style={{ display: pokemonIndex === pokemonList.length - 1 ? 'none' : 'inline-block' }}*/>
-                Suivant
-                </button>
-            )}
+            ))}
         </nav>
     );
 };
